@@ -1,0 +1,79 @@
+/* Переменные для тёмной темы (по умолчанию) */
+:root {
+  --bg: #0a0a0a;
+  --bg-secondary: #1a1a1a;
+  --bg-card: #2a2a2a;
+  --text: #ffffff;
+  --text-secondary: #cccccc;
+  --text-muted: #888888;
+  --accent: #ff6b35;
+  --accent-hover: #e55a2b;
+  --accent-light: #ff8c42;
+  --border: #333333;
+  --shadow: rgba(0, 0, 0, 0.3);
+  --shadow-hover: rgba(255, 107, 53, 0.2);
+  --gradient: linear-gradient(135deg, #ff6b35, #f7931e);
+  --border-radius: 12px;
+  --transition: all 0.3s ease;
+}
+
+/* Светлая тема */
+.theme--light {
+  --bg: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-card: #ffffff;
+  --text: #333333;
+  --text-secondary: #555555;
+  --text-muted: #777777;
+  --accent: #007bff;
+  --accent-hover: #0056b3;
+  --accent-light: #3395ff;
+  --border: #e0e0e0;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --shadow-hover: rgba(0, 123, 255, 0.2);
+  --gradient: linear-gradient(135deg, #007bff, #6f42c1);
+}
+
+/* Сброс стилей */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Базовые стили */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+/* Контейнеры */
+.header__container,
+.hero__container,
+.films__container,
+.stats__container,
+.synopsis__container,
+.facts__container,
+.actors__container,
+.analysis__container,
+.footer__container,
+.film-hero__container,
+.about-intro__container,
+.team__container,
+.technologies__container,
+.goals__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

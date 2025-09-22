@@ -1,0 +1,232 @@
+/* Film hero section */
+.film-hero {
+  padding: 2rem 0;
+  background: var(--bg-secondary);
+}
+
+.film-hero__container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.film-hero__image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: 0 20px 40px var(--shadow);
+  transition: var(--transition);
+}
+
+.film-hero__info {
+  padding: 1rem 0;
+}
+
+.film-hero__title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 1rem;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.film-hero__tagline {
+  font-size: 1.2rem;
+  color: var(--accent);
+  font-style: italic;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+/* Meta information */
+.meta {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.meta__item {
+  display: flex;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.meta__label {
+  font-weight: 600;
+  color: var(--text-muted);
+  min-width: 120px;
+  margin-right: 1rem;
+}
+
+.meta__value {
+  color: var(--text);
+}
+
+/* Content sections */
+.synopsis,
+.facts,
+.actors,
+.analysis {
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.synopsis h2,
+.facts h2,
+.actors h3,
+.analysis h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+
+.synopsis p {
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Facts section */
+.facts__list {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.facts__item {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: var(--bg-card);
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--accent);
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+
+.facts__item:hover {
+  background: var(--bg-secondary);
+  transform: translateX(5px);
+}
+
+.facts__item--hidden {
+  display: none;
+}
+
+.facts__toggle {
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+  min-height: 44px;
+}
+
+.facts__toggle:hover {
+  background: var(--accent);
+  color: white;
+}
+
+.facts__toggle[aria-expanded="true"] {
+  background: var(--accent);
+  color: white;
+}
+
+/* Actors section */
+.actors__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.actors__item {
+  background: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  border: 1px solid var(--border);
+}
+
+.actors__item:hover {
+  background: var(--bg-secondary);
+  transform: translateY(-3px);
+}
+
+.actors__actor {
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.actors__role {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Analysis section */
+.analysis p {
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Mobile styles for film detail page */
+@media (max-width: 768px) {
+  .synopsis,
+  .facts,
+  .actors,
+  .analysis {
+    padding: 2rem 0;
+  }
+  
+  .film-hero__container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .film-hero__poster {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .film-hero__title {
+    font-size: 2.5rem;
+  }
+  
+  .meta__item {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .meta__label {
+    min-width: auto;
+    margin-right: 0;
+    font-weight: 700;
+  }
+  
+  .actors__list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .film-hero__container {
+    grid-template-columns: 2fr 3fr;
+    gap: 4rem;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1023px) and (min-width: 769px) {
+  .film-hero__container {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+  }
+}

@@ -1,11 +1,167 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <meta charset="UTF-8" />
-    <title>Главная</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Киносайт - коллекция лучших фильмов. Джокер, Остров проклятых и другие культовые картины.">
+    <title>Кино и точка</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header-footer.css">  
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
-    <h1>23КНТ-5</h1>
+    <header class="header">
+        <div class="header__container">
+            <h1 class="header__logo">
+                <a href="index.html">Кино и точка</a>
+            </h1>
+            <nav class="nav" role="navigation">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link nav__link--active">Главная</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="about.html" class="nav__link">О проекте</a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" aria-label="Переключить тему" data-theme-toggle>
+                🌙
+            </button>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="hero__container">
+                <h1 class="hero__title">Коллекция Культовых Фильмов</h1>
+                <p class="hero__subtitle">Погрузитесь в мир величайших кинопроизведений</p>
+            </div>
+        </section>
+
+        <section class="films">
+            <div class="films__container">
+                <h2 class="films__title">Наша Коллекция</h2>
+                <div class="films__grid">
+                    <article class="film-card">
+                        <div class="film-card__image">
+                            <img src="images/joker-thumb.jpg" alt="Постер фильма Джокер 2019" class="film-card__poster">
+                            <div class="film-card__overlay">
+                                <a href="joker.html" class="btn btn--primary">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="film-card__content">
+                            <h3 class="film-card__title">Джокер</h3>
+                            <p class="film-card__year">2019</p>
+                            <p class="film-card__director">Тодд Филлипс</p>
+                            <ul class="film-card__genres">
+                                <li>Драма</li>
+                                <li>Криминал</li>
+                                <li>Триллер</li>
+                            </ul>
+                            <p class="film-card__description">
+                                Готэм, начало 1980-х годов. Комик Артур Флек живет со своей больной матерью и изо всех сил старается найти свое место в жизни...
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="film-card">
+                        <div class="film-card__image">
+                            <img src="images/shutter-island-thumb.jpg" alt="Постер фильма Остров проклятых 2010" class="film-card__poster">
+                            <div class="film-card__overlay">
+                                <a href="shutter-island.html" class="btn btn--primary">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="film-card__content">
+                            <h3 class="film-card__title">Остров проклятых</h3>
+                            <p class="film-card__year">2010</p>
+                            <p class="film-card__director">Мартин Скорсезе</p>
+                            <ul class="film-card__genres">
+                                <li>Триллер</li>
+                                <li>Детектив</li>
+                                <li>Драма</li>
+                            </ul>
+                            <p class="film-card__description">
+                                Федеральный маршал Тедди Дэниэлс прибывает на остров Шаттер, чтобы расследовать исчезновение пациентки психиатрической клиники...
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="film-card">
+                        <div class="film-card__image">
+                            <img src="images/joker-thumb.jpg" alt="Постер фильма Джокер 2019" class="film-card__poster">
+                            <div class="film-card__overlay">
+                                <a href="joker.html" class="btn btn--primary">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="film-card__content">
+                            <h3 class="film-card__title">Фильм 3</h3>
+                            <p class="film-card__year">2019</p>
+                            <p class="film-card__director">Тодд Филлипс</p>
+                            <ul class="film-card__genres">
+                                <li>Драма</li>
+                                <li>Криминал</li>
+                                <li>Триллер</li>
+                            </ul>
+                            <p class="film-card__description">
+                                Готэм, начало 1980-х годов. Комик Артур Флек живет со своей больной матерью и изо всех сил старается найти свое место в жизни...
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="film-card">
+                        <div class="film-card__image">
+                            <img src="images/joker-thumb.jpg" alt="Постер фильма Джокер 2019" class="film-card__poster">
+                            <div class="film-card__overlay">
+                                <a href="joker.html" class="btn btn--primary">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="film-card__content">
+                            <h3 class="film-card__title">Фильм 4</h3>
+                            <p class="film-card__year">2019</p>
+                            <p class="film-card__director">Тодд Филлипс</p>
+                            <ul class="film-card__genres">
+                                <li>Драма</li>
+                                <li>Криминал</li>
+                                <li>Триллер</li>
+                            </ul>
+                            <p class="film-card__description">
+                                Готэм, начало 1980-х годов. Комик Артур Флек живет со своей больной матерью и изо всех сил старается найти свое место в жизни...
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="stats__container">
+                <div class="stats__grid">
+                    <div class="stat-item">
+                        <div class="stat-item__number">4</div>
+                        <div class="stat-item__label">Фильма в коллекции</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-item__number">4</div>
+                        <div class="stat-item__label">Режиссера</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-item__number">∞</div>
+                        <div class="stat-item__label">Часов удовольствия</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__text">© 2025 Кино и точка. Команда студентов.</p>
+            <p class="footer__text">Учебный проект по веб-разработке</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>

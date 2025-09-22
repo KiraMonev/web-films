@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="О проекте - учебный сайт команды студентов по веб-разработке">
+    <title>Кино и точка</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <h1 class="header__logo">
+                <a href="index.html">Кино и точка</a>
+            </h1>
+            <nav class="nav" role="navigation">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Главная</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="about.html" class="nav__link nav__link--active">О проекте</a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" aria-label="Переключить тему" data-theme-toggle>
+                🌙
+            </button>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="hero__container">
+                <h1 class="hero__title">О проекте</h1>
+                <p class="hero__subtitle">Учебный проект по веб-разработке</p>
+            </div>
+        </section>
+
+        <section class="about-intro">
+            <div class="about-intro__container">
+                <p class="about-intro__text">
+                    Этот сайт создан как учебный проект команды студентов по курсу веб-разработки. 
+                    Цель проекта — изучить современные технологии HTML, CSS и JavaScript, а также 
+                    создать адаптивный сайт о культовых фильмах.
+                </p>
+            </div>
+        </section>
+
+        <section class="team">
+            <div class="team__container">
+                <h2 class="team__title">Команда проекта</h2>
+                <ul class="team__list">
+                    <li class="team__member">Авербух Семён</li>
+                    <li class="team__member">Васильева Виктория</li>
+                    <li class="team__member">Монёв Кирилл</li>
+                    <li class="team__member">Сесекина Елена</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="technologies">
+            <div class="technologies__container">
+                <h2 class="technologies__title">Технологии</h2>
+                <ul class="technologies__list">
+                    <li class="technologies__item">HTML5 — семантическая верстка</li>
+                    <li class="technologies__item">CSS3 — адаптивность, анимации</li>
+                    <li class="technologies__item">JavaScript — интерактивные элементы</li>
+                </ul>
+                
+                <div class="technologies__note">
+                    <p><strong>Особенность:</strong> Проект создан без использования фреймворков и библиотек — только чистые HTML, CSS и JavaScript</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="goals">
+            <div class="goals__container">
+                <h2 class="goals__title">Цели и задачи</h2>
+                <div class="goals__content">
+                    <div class="goals__main">
+                        <ul class="goals__list">
+                            <li class="goals__item">Создать адаптивный сайт с несколькими страницами</li>
+                            <li class="goals__item">Реализовать интерактивные элементы на JavaScript</li>
+                            <li class="goals__item">Применить принципы семантической верстки</li>
+                            <li class="goals__item">Продемонстрировать работу в команде</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="stats__container">
+                <div class="stats__grid">
+                    <div class="stat-item">
+                        <div class="stat-item__number">4</div>
+                        <div class="stat-item__label">Участника команды</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-item__number">3</div>
+                        <div class="stat-item__label">Технологии</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-item__number">4</div>
+                        <div class="stat-item__label">Культовых фильма</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__text">© 2025 Кино и точка. Команда студентов.</p>
+            <p class="footer__text">Учебный проект по веб-разработке</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

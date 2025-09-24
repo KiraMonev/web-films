@@ -1,0 +1,258 @@
+/* Film hero section */
+.film-hero {
+  padding: 2% 0;
+  background: var(--bg-secondary);
+}
+
+.film-hero__container {
+  display: grid;
+}
+
+.film-hero__image {
+  width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: 0 20px 40px var(--shadow);
+}
+
+.film-hero__title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin: 0 0 1rem 0;
+  color: var(--text);
+  font-weight: 700;
+}
+
+/* Meta information */
+.film__additional-info {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.film__additional-info__item {
+  display: flex;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.film__additional-info__label {
+  font-weight: 600;
+  color: var(--text-muted);
+  min-width: 120px;
+  margin-right: 1rem;
+}
+
+.film__additional-info__value {
+  color: var(--text);
+}
+
+/* Content sections */
+.synopsis,
+.facts,
+.actors {
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.synopsis h2,
+.facts h2,
+.actors h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+
+.synopsis p {
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Actors section */
+.actors {
+  padding: 3rem 0;
+  background: var(--bg-secondary);
+}
+
+.actors__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+.actor-card {
+  background: var(--bg-card);
+  padding: 1.25rem;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  border: 1px solid var(--border);
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  min-height: 360px;
+  overflow: hidden;
+}
+
+.actor-card__image-wrap {
+  width: 100%;
+  max-width: 220px;
+  aspect-ratio: 3 / 4;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+}
+
+.actor-card__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity .35s ease, transform .35s ease;
+  border-radius: inherit;
+  backface-visibility: hidden;
+}
+
+.actor-card__image--actor {
+  z-index: 1;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.actor-card:hover .actor-card__image--character {
+  opacity: 1;
+  transform: scale(1);
+}
+.actor-card:hover .actor-card__image--actor {
+  opacity: 0;
+  transform: scale(0.98);
+}
+
+.actor-card__image--character {
+  z-index: 2;
+  opacity: 0;
+  transform: scale(1.05);
+  pointer-events: none;
+}
+
+.actor-card__name {
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.actor-card__role {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+
+/* Facts section */
+.facts__list {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.facts__item {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: var(--bg-card);
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--accent);
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+
+.facts__item:hover {
+  background: var(--bg-secondary);
+  transform: translateX(5px);
+}
+
+.facts__item--hidden {
+  display: none;
+}
+
+.facts__toggle {
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+  min-height: 44px;
+}
+
+.facts__toggle:hover {
+  background: var(--accent);
+  color: white;
+}
+
+
+/* Mobile styles for film detail page */
+@media (max-width: 768px) {
+  .synopsis,
+  .facts,
+  .actors {
+    padding: 2rem 0;
+  }
+  
+  .film-hero__container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .film-hero__poster {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .film-hero__title {
+    font-size: 2.5rem;
+  }
+  
+  .film__additional-info__item {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .film__additional-info__label {
+    min-width: auto;
+    margin-right: 0;
+    font-weight: 700;
+  }
+  
+  .actors__list {
+    grid-template-columns: 1fr;
+  }
+
+  .facts__toggle{
+    display: flex;
+    justify-self: end; 
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .film-hero__container {
+    grid-template-columns: 2fr 3fr;
+    gap: 4rem;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1023px) and (min-width: 769px) {
+  .film-hero__container {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+  }
+}

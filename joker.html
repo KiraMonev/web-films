@@ -1,10 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <meta charset="UTF-8" />
-    <title>Joker</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кино и точка</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/joker.css">
 </head>
 <body>
-    
+    <header class="header">
+        <div class="header__container">
+            <h1 class="header__logo">
+                <a href="index.html">Кино и точка</a>
+            </h1>
+            <nav class="nav" role="navigation">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Главная</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="about.html" class="nav__link">О проекте</a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" aria-label="Переключить тему" data-theme-toggle>
+                🌙
+            </button>
+        </div>
+    </header>
+
+    <main class="main">
+        <article class="film-hero">
+            <div class="film-hero__container">
+                <div class="film-hero__poster">
+                    <img src="images/joker-poster.jpg" alt="Постер фильма Джокер 2019" class="film-hero__image">
+                </div>
+                <div class="film-hero__info">
+                    <h1 class="film-hero__title">Джокер</h1>
+
+                    <ul class="film__additional-info">
+                        <li class="film__additional-info__item">
+                            <span class="film__additional-info__label">Год:</span>
+                            <span class="film__additional-info__value">2019</span>
+                        </li>
+                        <li class="film__additional-info__item">
+                            <span class="film__additional-info__label">Страны:</span>
+                            <span class="film__additional-info__value">США, Канада, Австралия</span>
+                        </li>
+                        <li class="film__additional-info__item">
+                            <span class="film__additional-info__label">Режиссёр:</span>
+                            <span class="film__additional-info__value">Тодд Филлипс</span>
+                        </li>
+                        <li class="film__additional-info__item">
+                            <span class="film__additional-info__label">Жанры:</span>
+                            <span class="film__additional-info__value">Драма, Преступление, Триллер</span>
+                        </li>
+                        <li class="film__additional-info__item">
+                            <span class="film__additional-info__label">Длительность:</span>
+                            <span class="film__additional-info__value">122 минут</span>
+                        </li>
+                        <li class="film__additional-info__item">
+                            <span class="film__additional-info__label">Бюджет:</span>
+                            <span class="film__additional-info__value">$70 млн</span>
+                        </li>
+                        <li class="film__additional-info__item">
+                            <span class="film__additional-info__label">Возраст:</span>
+                            <span class="film__additional-info__value">18+</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <section class="synopsis">
+            <div class="synopsis__container">
+                <h2>Краткое содержание</h2>
+                <p>Готэм, начало 1980-х годов</p>
+                <p>Комик Артур Флек живет с больной матерью, которая с детства учит его «ходить с улыбкой». Пытаясь нести в мир хорошее и дарить людям радость, Артур сталкивается с человеческой жестокостью и постепенно приходит к выводу, что этот мир получит от него не добрую улыбку, а ухмылку злодея Джокера.</p>               
+            </div>
+        </section>
+
+        <section class="actors">
+            <div class="actors__container">
+                <h2>Актеры</h2>
+                <ul class="actors__list">
+                    <li class="actor-card">
+                        <div class="actor-card__image-wrap">
+                            <img src="images/joaquin-phoenix.jpg" alt="Хоакин Феникс" class="actor-card__image actor-card__image--actor">
+                            <img src="images/joaquin-arthur.jpg" alt="Артур Флек / Джокер" aria-hidden="true" class="actor-card__image actor-card__image--character">
+                        </div>
+                        <p class="actor-card__name">Хоакин Феникс</p>
+                        <p class="actor-card__role">Артур Флек / Джокер</p>
+                    </li>
+                    <li class="actor-card">
+                        <div class="actor-card__image-wrap">
+                            <img src="images/robert-de-niro.jpg" alt="Роберт Де Ниро" class="actor-card__image">
+                            <img src="images/robert-murray.jpg" alt="Мюррей Франклин" aria-hidden="true" class="actor-card__image actor-card__image--character">
+                        </div>
+                        <p class="actor-card__name">Роберт Де Ниро</p>
+                        <p class="actor-card__role">Мюррей Франклин</p>
+                    </li>
+                    <li class="actor-card">
+                        <div class="actor-card__image-wrap">
+                            <img src="images/zazie-beetz.jpg" alt="Зази Битц" class="actor-card__image">
+                            <img src="images/zazie-sophie.jpg" alt="Софи Дюмон" aria-hidden="true" class="actor-card__image actor-card__image--character">
+                        </div>
+                        <p class="actor-card__name">Зази Битц</p>
+                        <p class="actor-card__role">Софи Дюмон</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="facts" data-facts-section>
+            <div class="facts__container">
+                <h2>Интересные факты</h2>
+                <ul class="facts__list">
+                    <li class="facts__item">Хоакин Феникс потерял около 24 кг для роли Артура Флека, чтобы подчеркнуть его физическую и эмоциональную хрупкость.</li>
+                    <li class="facts__item">Танец Джокера на лестнице был импровизацией Хоакина Феникса, вдохновлённой музыкой, которую он слушал на съёмочной площадке.</li>
+                    <li class="facts__item">Фильм получил «Золотого льва» на Венецианском кинофестивале 2019 года, что стало редкостью для фильмов, основанных на комиксах.</li>
+                    <li class="facts__item facts__item--hidden">Сценаристы вдохновлялись фильмами Мартина Скорсезе, такими как «Таксист» и «Король комедии», для создания мрачной атмосферы Готэма.</li>
+                    <li class="facts__item facts__item--hidden">Знаменитая сцена в ванной, где Артур танцует, была снята за один дубль.</li>
+                    <li class="facts__item facts__item--hidden">Костюм Джокера был специально разработан с яркими цветами (красный, зелёный, жёлтый), чтобы контрастировать с мрачной палитрой Готэма.</li>
+                    <li class="facts__item facts__item--hidden">Хоакин Феникс отказался от использования дублёра для сцены падения в мусорный бак, выполнив трюк самостоятельно.</li>
+                </ul>
+                <button class="facts__toggle" aria-expanded="false" data-facts-toggle>
+                    Показать всё
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__text">© 2025 Кино и точка. Команда студентов.</p>
+            <p class="footer__text">Учебный проект по веб-разработке</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>

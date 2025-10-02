@@ -99,26 +99,27 @@
 /* Mobile navigation */
 @media (max-width: 768px) {
   .header__container {
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem 15px;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+    padding: 0.5rem 1rem;
   }
   
   .nav__list {
-    flex-direction: column;
-    gap: 0.5rem;
-    width: 100%;
+    flex-direction: row;
     text-align: center;
+    gap: 1rem;
   }
   
   .nav__link {
-    display: block;
-    padding: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.9rem
   }
   
   .theme-toggle {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+    position: static;
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
   }
 }

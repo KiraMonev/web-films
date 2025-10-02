@@ -37,4 +37,66 @@ document.addEventListener('DOMContentLoaded', () => {
             factsBtn.textContent = factsShown ? 'Скрыть' : 'Показать всё';
         });
     }
+
+
+    // --- Анимация при скролле ---
+    const animateElements = document.querySelectorAll('.animate-on-scroll');
+    
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animated');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    let delay = 0;
+    let currentSection = null;
+    
+    animateElements.forEach(element => {
+        const section = element.closest('section');
+        
+        if (section !== currentSection) {
+            delay = 0;
+            currentSection = section;
+        }
+        
+        element.style.transitionDelay = `${delay}s`;
+        delay += 0.1;
+        
+        observer.observe(element);
+    });
+
+
+    // --- Анимация контейнера с фильмом ---
+    window.addEventListener('load', () => {
+    const heroBlock = document.querySelector('.film-hero__container.hero-block-animate');
+
+    if (heroBlock) {
+        heroBlock.classList.add('active');
+    }
+    });
+
+
+    // --- Вкладки ---
+    const tabButtons = document.querySelectorAll('.tabs__button');
+    const tabContents = document.querySelectorAll('.tabs__content');
+
+    tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const target = button.getAttribute('data-tab');
+
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
+
+        button.classList.add('active');
+        document.getElementById(target).classList.add('active');
+    });
+    });
 });

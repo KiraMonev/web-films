@@ -1,0 +1,408 @@
+/* Film hero section - Titanic */
+.film-hero {
+    padding: 2% 0;
+    background: var(--bg-secondary);
+  }
+  
+  .film-hero__container {
+    display: grid;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .film-hero__image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 20px 40px var(--shadow);
+    border: 2px solid var(--border);
+  }
+  
+  .film-hero__title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin: 0 0 1rem 0;
+    color: var(--text);
+    font-weight: 700;
+  }
+  
+  /* Meta information */
+  .film__additional-info {
+    list-style: none;
+    margin-bottom: 2rem;
+  }
+  
+  .film__additional-info__item {
+    display: flex;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .film__additional-info__label {
+    font-weight: 600;
+    color: var(--text-muted);
+    min-width: 120px;
+    margin-right: 1rem;
+  }
+  
+  .film__additional-info__value {
+    color: var(--text);
+  }
+  
+  /* Content sections */
+  .synopsis,
+  .facts,
+  .scenes,
+  .soundtrack {
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .synopsis__container,
+  .facts__container,
+  .scenes__container,
+  .soundtrack__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .synopsis h2,
+  .facts h2,
+  .scenes h2,
+  .soundtrack h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+  }
+  
+  .synopsis p {
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: none;
+    text-align: left;
+  }
+  
+  /* Scenes section */
+  .scenes {
+    padding: 3rem 0;
+    background: var(--bg-secondary);
+  }
+  
+  .scenes__list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .scene-card {
+    background: var(--bg-card);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    border: 2px solid var(--border);
+    overflow: hidden;
+    box-shadow: 0 4px 12px var(--shadow);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .scene-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px var(--shadow);
+    border-color: var(--accent);
+  }
+  
+  .scene-card__image-wrap {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    border-bottom: 2px solid var(--border);
+  }
+  
+  .scene-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .35s ease;
+  }
+  
+  .scene-card:hover .scene-card__image {
+    transform: scale(1.05);
+  }
+  
+  .scene-card__content {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  .scene-card__title {
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    text-align: left;
+  }
+  
+  .scene-card__description {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.4;
+    flex-grow: 1;
+    text-align: left;
+  }
+  
+  .soundtrack__player {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 2rem;
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--border);
+    box-shadow: 0 8px 25px var(--shadow);
+    align-items: center;
+    max-width: none; 
+    margin: 0;
+  }
+  
+  .soundtrack__cover {
+    width: 100%;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 8px 20px var(--shadow);
+    border: 2px solid var(--border);
+  }
+  
+  .soundtrack__image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .soundtrack__title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    text-align: left;
+  }
+  
+  .soundtrack__song {
+    font-size: 1.1rem;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    text-align: left;
+  }
+  
+  .soundtrack__artist {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    text-align: left;
+  }
+  
+  .soundtrack__audio-player {
+    width: 100%;
+    margin: 1rem 0;
+  }
+  
+  .soundtrack__audio-player audio {
+    width: 100%;
+    border-radius: 25px;
+    border: 1px solid var(--border);
+  }
+  
+  .soundtrack__description {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    text-align: left;
+  }
+  
+  .facts__list {
+    list-style: none;
+    margin-bottom: 2rem;
+    max-width: none; 
+    margin-left: 0; 
+    margin-right: 0;
+  }
+  
+  .facts__item {
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    background: var(--bg-card);
+    border-radius: var(--border-radius);
+    border: 2px solid var(--border);
+    border-left: 6px solid var(--accent);
+    color: var(--text-secondary);
+    transition: var(--transition);
+    box-shadow: 0 2px 8px var(--shadow);
+    text-align: left;
+  }
+  
+  .facts__item:hover {
+    background: var(--bg-secondary);
+    transform: translateX(5px);
+    border-color: var(--accent);
+  }
+  
+  .facts__item--hidden {
+    display: none;
+  }
+  
+  .facts__toggle {
+    background: transparent;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+    min-height: 44px;
+    display: block;
+    margin: 0; 
+  }
+  
+  .facts__toggle:hover {
+    background: var(--accent);
+    color: white;
+  }
+  
+  /* Main content container */
+  .main {
+    max-width: 1400px;
+    margin: 0 auto;
+    background: var(--bg);
+    box-shadow: 0 0 0 1px var(--border);
+  }
+  
+  /* Header and Footer containers */
+  .header__container,
+  .footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  /* Mobile styles for film detail page */
+  @media (max-width: 768px) {
+    .synopsis,
+    .facts,
+    .scenes,
+    .soundtrack {
+      padding: 2rem 0;
+    }
+    
+    .film-hero__container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    
+    .film-hero__poster {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+    
+    .film-hero__title {
+      font-size: 2.5rem;
+      text-align: left;
+    }
+    
+    .film__additional-info__item {
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+    
+    .film__additional-info__label {
+      min-width: auto;
+      margin-right: 0;
+      font-weight: 700;
+    }
+    
+    .scenes__list {
+      grid-template-columns: 1fr;
+      max-width: 400px;
+    }
+  
+    .scene-card__image-wrap {
+      height: 180px;
+    }
+  
+    .soundtrack__player {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      padding: 1.5rem;
+      margin: 0;
+    }
+  
+    .soundtrack__cover {
+      max-width: 200px;
+      margin: 0;
+    }
+  
+    .facts__list {
+      margin: 0;
+    }
+  
+    .facts__toggle {
+      margin: 0;
+    }
+  }
+  
+  /* Tablet */
+  @media (max-width: 1023px) and (min-width: 769px) {
+    .film-hero__container {
+      grid-template-columns: 1fr 1.5fr;
+      gap: 2rem;
+    }
+  
+    .scenes__list {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 800px;
+    }
+  }
+  
+  /* Desktop */
+  @media (min-width: 1024px) {
+    .film-hero__container {
+      grid-template-columns: 2fr 3fr;
+      gap: 4rem;
+    }
+  
+    .scenes__list {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 900px;
+    }
+  }
+  
+  /* Large desktop */
+  @media (min-width: 1200px) {
+    .scenes__list {
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 1200px;
+    }
+    
+    .film-hero__container,
+    .synopsis__container,
+    .facts__container,
+    .scenes__container,
+    .soundtrack__container {
+      padding: 0 2rem;
+    }
+  }
